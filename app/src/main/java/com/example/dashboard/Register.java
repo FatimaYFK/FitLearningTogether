@@ -18,7 +18,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -30,7 +29,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Goal extends AppCompatActivity {
+public class Register extends AppCompatActivity {
 
     public static final String TAG = "TAG";
     EditText mFullName,mEmail,mPassword,mPhone;
@@ -47,7 +46,7 @@ public class Goal extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_goal);
+        setContentView(R.layout.activity_register);
 
         mFullName   = findViewById(R.id.fullName);
         mEmail      = findViewById(R.id.Email);
@@ -80,7 +79,7 @@ public class Goal extends AppCompatActivity {
 
                 reference.child(phoneNo).setValue(helperClass);
                 //   reference.setValue("firs data stored");
-                Intent intent = new Intent(Goal.this,Education.class);
+                Intent intent = new Intent(Register.this, Login.class);
                 startActivity(intent);
 
 
@@ -132,7 +131,7 @@ public class Goal extends AppCompatActivity {
                             fuser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
-                                    Toast.makeText(Goal.this, "Verification Email Has been Sent.", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Register.this, "Verification Email Has been Sent.", Toast.LENGTH_SHORT).show();
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
@@ -141,7 +140,7 @@ public class Goal extends AppCompatActivity {
                                 }
                             });
 
-                            Toast.makeText(Goal.this, "User Created.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Register.this, "User Created.", Toast.LENGTH_SHORT).show();
                             userID = fAuth.getCurrentUser().getUid();
                             DocumentReference documentReference = fStore.collection("users").document(userID);
                             Map<String,Object> user = new HashMap<>();
@@ -162,7 +161,7 @@ public class Goal extends AppCompatActivity {
                             startActivity(new Intent(getApplicationContext(),Yourprofil.class));
 
                         }else {
-                            Toast.makeText(Goal.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Register.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.GONE);
                         }
                     }
@@ -175,7 +174,7 @@ public class Goal extends AppCompatActivity {
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),Education.class));
+                startActivity(new Intent(getApplicationContext(), Login.class));
             }
         });
 

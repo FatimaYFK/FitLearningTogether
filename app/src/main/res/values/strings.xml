@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Deneme</string>
+    <string name="app_name">FitLearningTogether</string>
     <string name="forget_password">Forget Password?</string>
     <string name="sign_in_to_continue">Sign In to continue</string>
     <string name="username">Username</string>

@@ -11,8 +11,8 @@
         android:theme="@style/Theme.Dashboard">
         <activity android:name=".Yourprofil"></activity>
         <activity android:name=".EditProfile" />
-        <activity android:name=".Goal" />
-        <activity android:name=".Education" />
+        <activity android:name=".Register" />
+        <activity android:name=".Login" />
         <activity android:name=".All" />
         <activity android:name=".HTM" />
         <activity android:name=".Greenhouse" />
