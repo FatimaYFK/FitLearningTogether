@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#E0E4E4"
-    tools:context=".MainActivity">
+    android:background="@drawable/transport_ing_background"
+    tools:context=".HTM">
 
     <TextView
         android:id="@+id/myDate3"
@@ -23,7 +23,7 @@
 
     <LinearLayout
         android:layout_marginTop="20dp"
-        android:background="@drawable/bg_calen"
+        android:background="@color/text_color_description"
         android:layout_marginLeft="45dp"
         android:layout_marginRight="45dp"
         android:layout_width="300dp"
@@ -39,7 +39,6 @@
         </CalendarView>
 
 
-
     </LinearLayout>
 
     <LinearLayout
@@ -51,15 +50,16 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/my_date3"
-            android:layout_width="match_parent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:hint="Enter your name and date here!"
-            app:counterEnabled="true"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            android:layout_gravity="center"
+            android:hint="Your name / Date!"
+            app:counterEnabled="true">
 
 
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:inputType="text"
                 android:textColor="#000000" />
@@ -69,9 +69,10 @@
 
         <Button
             android:id="@+id/mybutton3"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:background="#000"
+            android:layout_gravity="center"
             android:text="Save"
             android:textColor="#FFF8F8"
             android:transitionName="button_tran" />

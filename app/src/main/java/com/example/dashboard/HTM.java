@@ -51,7 +51,7 @@ public class HTM extends AppCompatActivity {
 
                 UserHelperClass helperClass = new UserHelperClass(val);
                 referencen1.child(val).setValue(helperClass);
-                Intent intent = new Intent(HTM.this,MainActivity.class);
+                Intent intent = new Intent(HTM.this,LoginDachboard.class);
                 startActivity(intent);
 
             }

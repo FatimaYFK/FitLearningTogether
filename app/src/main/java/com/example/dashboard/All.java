@@ -45,13 +45,13 @@ public class All extends AppCompatActivity {
             public void onClick(View v) {
 
                 rootNoden = FirebaseDatabase.getInstance();
-                referencen = rootNoden.getReference("mydate");
+                referencen = rootNoden.getReference("All");
 
                 String val = mydaten.getEditText().getText().toString();
 
                 UserHelperClass helperClass = new UserHelperClass(val);
                 referencen.child(val).setValue(helperClass);
-                Intent intent = new Intent(All.this,MainActivity.class);
+                Intent intent = new Intent(All.this,LoginDachboard.class);
                 startActivity(intent);
 
             }

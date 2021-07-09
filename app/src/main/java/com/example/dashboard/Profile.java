@@ -51,7 +51,7 @@ public class Profile extends AppCompatActivity {
 
                 UserHelperClass helperClass = new UserHelperClass(val);
                 referencen1.child(val).setValue(helperClass);
-                Intent intent = new Intent(Profile.this,MainActivity.class);
+                Intent intent = new Intent(Profile.this,LoginDachboard.class);
                 startActivity(intent);
 
             }

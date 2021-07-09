@@ -51,7 +51,7 @@ public class Greenhouse extends AppCompatActivity {
 
                 UserHelperClass helperClass = new UserHelperClass(val);
                 referencen1.child(val).setValue(helperClass);
-                Intent intent = new Intent(Greenhouse.this,MainActivity.class);
+                Intent intent = new Intent(Greenhouse.this,LoginDachboard.class);
                 startActivity(intent);
 
             }
